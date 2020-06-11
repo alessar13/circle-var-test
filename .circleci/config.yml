@@ -25,6 +25,7 @@ jobs:
           command: |
             echo 'batman pipeline parameter - ' <<pipeline.parameters.batman_dsa>>
             echo 'superman pipeline parameter - ' <<pipeline.parameters.superman_dsad>> 
+            echo 'he is a ' <<pipeline.parameters.batman_dsa>> ' hero!' 
 workflows:
     build-and-test:
       jobs:

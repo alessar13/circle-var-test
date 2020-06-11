@@ -1,5 +1,15 @@
 version: 2.1
 
+parameters:
+  batman:
+    type: string
+    default: "Bruce Wayne"
+  superman:
+    type: string
+    default: "Clark Kent"
+  run:
+    type: boolean
+    default: true 
 
 orbs:
   node: circleci/node@1.1.6
@@ -10,6 +20,11 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run:     
+          name: PIPELINE PARAMETERS 
+          command: |
+            echo 'batman pipeline parameter - ' <<pipeline.parameters.batman>>
+            echo 'superman pipeline parameter - ' <<pipeline.parameters.superman>> 
 workflows:
     build-and-test:
       jobs:

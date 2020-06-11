@@ -23,8 +23,8 @@ jobs:
       - run:     
           name: PIPELINE PARAMETERS 
           command: |
-            echo 'batman pipeline parameter - ' <<pipeline.parameters.batman>>
-            echo 'superman pipeline parameter - ' <<pipeline.parameters.superman>> 
+            echo 'batman pipeline parameter - ' <<pipeline.parameters.batman_dsa>>
+            echo 'superman pipeline parameter - ' <<pipeline.parameters.superman_dsad>> 
 workflows:
     build-and-test:
       jobs:
